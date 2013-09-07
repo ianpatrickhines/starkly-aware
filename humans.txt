@@ -1,0 +1,18 @@
+/* humanstxt.org */
+
+# The humans responsible & technology colophon
+
+# TEAM
+
+	Ian Patrick Hines
+	Site: http://www.ianpatrickhines.com
+	Twitter: http://twitter.com/ianpatrickhines
+	Location: Los Angeles, California
+
+# THANKS
+
+    Jesse Haff (http://www.jessehaff.com/) and the NationBuilder (http://nationbuilder.com) tech team for designing and developing the Aware theme, on which this theme is based. 
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, Javascript and Liquid Markup.
