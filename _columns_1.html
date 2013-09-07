@@ -1,0 +1,10 @@
+<div class="onecolumn-container clearfix">
+
+  <div class="columns-1-flash">{{ content_for_notifications }}</div>
+
+  <div class="content-{{ request.template  | replace: '_', '-' }}">
+    {% yield %}
+  </div>
+
+</div>
+<!-- /onecolumn-container -->

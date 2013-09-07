@@ -1,0 +1,85 @@
+<div class="twocolumn-container clearfix">
+  
+  <div class="left-column">
+    
+    {{ content_for_notifications }}
+    
+    <div class="content-{{ request.template  | replace: '_', '-' }}">
+      {% yield %}
+    </div>
+    
+  </div>
+  <!-- .left_column -->
+  
+  <div class="right-column">
+    
+    {% if request.logged_in? %}
+    
+    {% include "supporter_nav" %}
+    
+    {% else %}
+    
+    <ul class="supporter-nav">
+      <li><a href="{{ request.facebook_connect_url }}"><i class="icon-facebook-squared"></i> Sign in with Facebook</a>
+      </li>
+      <li><a href="{{ request.twitter_connect_url }}"><i class="icon-twitter-squared"></i> Sign in with Twitter</a></li>
+      <li><a href="/login"><i class="icon-user"></i> Sign in with Email</a></li>
+    </ul>
+    
+    {% if site.has_signup_page? %}
+    {% include "signup_form" with site.signup_page %}
+    {% endif %}
+    
+    {% if site.has_button1? %}
+    <a class="button supporter-nav-button" href="{{ site.button1_page.full_url_with_profile_recruiter }}">{{ site.button1_text }}</a>
+    {% endif %}
+    
+    {% if site.has_button2? %}
+    <a class="button supporter-nav-button" href="{{ site.button2_page.full_url_with_profile_recruiter }}">{{ site.button2_text }}</a>
+    {% endif %}
+    
+    {% if site.has_button3? %}
+    <a class="button supporter-nav-button" href="{{ site.button3_page.full_url_with_profile_recruiter }}">{{ site.button3_text }}</a>
+    {% endif %}
+    
+    <div class="padtopmore">
+      <div class="box">
+        {% if site.has_facebook_page? %}
+        <div class="desktop-visible">
+          <div class="fb-like-box" data-href="{{ site.broadcaster.facebook_page_profile_url }}" data-width="240" data-show-faces="true" data-stream="false" data-header="false"></div>
+        </div>
+        <div class="mobile-visible">
+          <div class="fb-like-box" data-href="{{ site.broadcaster.facebook_page_profile_url }}" data-width="240" data-stream="false" data-show-faces="false"></div>
+        </div>
+        {% else %}
+        <fb:like href="{{ site.full_url }}" colorscheme="{{ site.facebook_colorscheme }}" width="240"></fb:like>
+        {% endif %}  
+        
+        {% if site.has_twitter? %}
+        <div class="padtopmore">
+          <a href="{{ site.broadcaster.twitter_profile_url }}" class="twitter-follow-button" data-show-count="true" data-size="large" data-show-screen-name="false">Follow @{{ site.broadcaster.twitter_login }} on Twitter</a>
+        </div>
+        {% endif %}
+        
+        <div class="padtopmore">
+          <div class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/108466010816642032003" data-rel="publisher"></div>
+        </div>
+        
+        {% if page and page.has_rss? %}
+        <div class="padtopmore">
+          <a href="{{ page.rss_url }}"><i class="icon-rss"></i></a> <a href="{{ page.rss_url }}">Subscribe with RSS</a>
+        </div>
+        {% elsif page and page.has_parent? and page.parent.has_rss? %}
+        <div class="padtopmore">
+          <a href="{{ page.parent.rss_url }}"><i class="icon-rss"></i></a>
+          <a href="{{ page.parent.rss_url }}">Subscribe with RSS</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    
+    {% endif %}
+    
+  </div>
+  <!-- .right-column -->
+</div> <!-- .twocolumn_container -->

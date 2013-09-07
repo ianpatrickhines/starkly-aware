@@ -1,0 +1,4 @@
+<div class="byline">
+  {% if page.parent.slug == "photography" %}Uploaded on {% else %}{% endif %}{{ page.published_at | date: '%B %d, %Y &middot; %l:%M %p' }}
+  {% if site.has_rule_page? and request.logged_in? %}&middot; <a href="{{ page.flag_url }}" class="flag">Flag</a>{% endif %}
+</div>

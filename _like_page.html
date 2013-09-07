@@ -1,0 +1,23 @@
+<div class="sharetable padtopless clearfix">
+  <div class="facebook-cell">
+    {% if request.sorta_logged_in? %}
+    <div class="desktop-visible">
+      <fb:like href="{{ page.full_url }}" show_faces="false" width="300" send="true" action="like" colorscheme="{{ site.facebook_colorscheme }}" ref="r{{ current_signup.id }}"></fb:like>
+    </div>
+    <div class="mobile-visible">
+      <fb:like href="{{ page.full_url }}" show_faces="false" width="245" send="false" action="like" colorscheme="{{ site.facebook_colorscheme }}" ref="r{{ current_signup.id }}"></fb:like>
+    </div>
+    {% else %}
+    <div class="desktop-visible">
+      <fb:like href="{{ page.full_url }}" show_faces="false" width="300" colorscheme="{{ site.facebook_colorscheme }}" send="true" action="like"></fb:like>
+    </div>
+    <div class="mobile-visible">
+      <fb:like href="{{ page.full_url }}" show_faces="false" width="245" colorscheme="{{ site.facebook_colorscheme }}" send="false" action="like"></fb:like>
+    </div>
+    {% endif %}
+  </div>
+  <div class="twitter-cell">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-text="{{ page.default_face_tweet_text }}" data-via="{{ site.broadcaster.twitter_login }}">Tweet</a>
+  </div>
+  {{ page.google_plus_html }}
+</div>

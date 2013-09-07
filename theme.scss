@@ -1,0 +1,1818 @@
+/* ============================================================================
+This is a mobile first stylesheet and it applies to all screen widths.
+For changes to the desktop or tablet viewports, see tablet-and-desktop.scss.
+============================================================================ */
+
+//* style variables *//
+
+// headline font
+$headline-font: "museo-slab",serif;
+
+// main font
+$font: "museo-sans", Helvetica, sans-serif;
+
+$theme-color-1: #1ABC9C;
+$theme-color-2: #fff;
+$theme-color-3: #1ABC9C;
+$theme-color-4: #3d3d3d;
+
+// form input area focus color
+$theme-color-5: rgba(26, 188, 156, 0.6);
+
+// general success and error colors
+$red: #b94a48;
+$green: #619114;
+
+// background images
+$background-texture: "";
+$header-texture: "";
+$header-color: transparent;
+
+//* main responsive components *//
+
+@import "custom-mixins";
+
+// border-radius mixin
+@import "border_radius";
+
+// compass css3 mixins
+@import "compass/css3";
+
+// countdown widget for moneybomb page
+@import "framework_countdown2";
+
+// fluid grid
+@import "grid";
+
+// activity and page icons
+@import "icons";
+
+// form elements
+@import "forms";
+
+// buttons
+@import "buttons";
+
+// tables
+@import "tables";
+
+// pagination
+@import "pagination";
+
+// progress bar
+@import "progress-bar";
+
+// mobile nav
+@import "mobile-nav";
+
+// applies border-box to all elements
+
+* {
+  @include box-sizing(border-box);
+}
+
+.clearfix {
+  @include nb-clearfix;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+// headlines
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headline-font;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  line-height: 35px;
+}
+
+h3 {
+  line-height: 25px;
+}
+
+h1 {
+  font-size: 38.5px;
+}
+
+h2 {
+  font-size: 31.5px;
+}
+
+h3 {
+  font-size: 24.5px;
+}
+
+h4 {
+  font-size: 17.5px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 11.9px;
+}
+
+.hide {
+  display: none;
+}
+
+// general link styles
+
+a {
+  color: $theme-color-1;
+  text-decoration: none;
+  outline: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+// allows embedded images to expand/contract with viewport
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: none;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  background: url($background-texture) repeat $theme-color-2;
+  margin: 0;
+  font: 15px/21px $font;
+  color: #505054;
+}
+
+.width-container {
+  width: 90%;
+  margin: 0 5%;
+}
+
+.no-background {
+  background: none !important;
+}
+
+.center {
+  text-align: center;
+}
+
+// basic padding
+
+.padtopless {
+  padding-top: 5px;
+}
+
+.padtop {
+  padding-top: 10px;
+}
+
+.padtopmore {
+  padding-top: 15px;
+}
+
+.padbottomless {
+  padding-bottom: 5px;
+}
+
+.padbottom {
+  padding-bottom: 10px;
+}
+
+.padbottommore {
+  padding-bottom: 15px;
+}
+
+iframe[src *= 'youtube'] {
+  display: none;
+}
+
+.fb-like-box iframe {
+  display: block;
+}
+
+// message asking people to check their email to activate account
+
+.activation-message {
+  font-weight: bold;
+  font-size: 18px;
+  color: $theme-color-3;
+}
+
+// style an image with rounded corners
+
+.img-rounded {
+  @include border-radius(6px);
+}
+
+// style an image with a sublte frame
+
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+// style an image as a circle
+
+.img-circle {
+  @include border-radius(500px);
+}
+
+// add padding around an image
+
+.img-padleft {
+  margin: 5px 0 5px 15px;
+}
+
+.img-padright {
+  margin: 5px 15px 5px 0;
+}
+
+// javascript is used to wrap all iframes in a span called responsive-embed-wrapper to make them responsive
+
+.responsive-embed-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  display: block;
+  
+  iframe {
+    display: block;
+  }
+  
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.vcard {
+  .tel {
+    display: block;
+  }
+}
+// breadcrumbs
+
+.breadcrumbs {
+  padding: 8px 15px;
+  margin: 0 0 20px;
+  list-style: none;
+  background-color: #f5f5f5;
+  @include border-radius(4px);
+}
+
+.breadcrumbs > li {
+  display: inline-block;
+}
+
+.breadcrumbs > li > .divider {
+  padding: 0 5px;
+  color: #ccc;
+}
+
+.breadcrumbs > .active {
+  color: #999999;
+}
+
+// site title shown in header
+
+.title {
+  color: inherit;
+  font-size: 28px;
+  a {
+    color: inherit;
+  }
+}
+
+// wraps your site name or site logo
+
+header {
+  float: left;
+  padding: 28px 0 0 0;
+  max-width: 78%;
+}
+
+// if the site has a logo, center it it above content in mobile view
+
+.site-logo {
+  margin-top: 25px;
+  a {
+    float: left;
+  }
+  header {
+    float: none;
+    text-align: center;
+    padding: 0;
+    max-width: 100%;
+    margin-left: -38px; // sets logo to true center
+    img {
+      max-width: 200px;
+      max-height: 100px;
+    }
+  }
+}
+
+// if it's a splash page, center the logo or site name
+
+header.splash {
+  float: none;
+  text-align: center;
+  max-width: 100%;
+}
+
+.site-logo {
+  header.splash {
+    text-align: center;
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+// wraps every page headline
+
+#headline, .headline {
+  margin-bottom: 15px;
+}
+
+// icon which activates off canvas nav
+
+.menu-link {
+  float: left;
+  display: block;
+  padding: 10px;
+  margin: 25px 20px 0 0;
+}
+
+.menu-link {
+  background-color: $theme-color-3;
+  @include border-radius(2px);
+  .icon-menu {
+    color: #fff;
+    font-size: 18px;
+  }
+}
+
+// off canvas mobile nav
+
+nav {
+  @include mobile-nav;
+}
+
+// page layout if the sidebar is turned on
+
+.twocolumn-container {
+  margin-top: -30px;
+  .left-column, .right-column-wide {
+    background-color: #fff;
+    padding: 20px;
+    @include border-radius(5px);
+    border: 1px solid #fff;
+    margin-bottom: 15px;
+  }
+  .right-column, .left-column-narrow {
+    margin-bottom: 15px;
+  }
+}
+
+// page layout if the sidebar is turned off
+
+.onecolumn-container {
+  background-color: #fff;
+  padding: 20px;
+  @include border-radius(5px);
+  border: 1px solid #fff;
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+// supporter photo shown in supporter nav and user profile
+
+.supporter-pic {
+  @include border-radius(5px);
+  @include border-radius-top-left(7px); // hides background behind image
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  margin-bottom: 15px;
+  .user-status span {
+    display: inline-block;
+    padding-top: 5px;
+  }
+}
+
+.supporter-pic-left {
+  float: left;
+  display: table-cell;
+  width: 72px;
+  height: 72px;
+  position: relative;
+  margin: -1px 6px 0 -1px;
+  a {
+    display: block;
+  }
+  img {
+    @include border-radius-top-left(5px);
+    @include border-radius-bottom-left(5px);
+    max-width: 100%;
+  }
+  .pc {
+    display: block;
+    @include border-radius-bottom-left(5px);
+    font-size: 11px;
+    line-height: 20px;
+    background-color: $theme-color-3;
+    color: white;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    position: absolute;
+    margin-top: -19px;
+    text-align: center;
+  }
+}
+
+// supporter info displayed on the right of photo in supporter nav and user profile
+
+.supporter-pic-right {
+  font-size: 12px;
+  display: table-cell;
+  line-height: 18px;
+  min-height: 72px;
+  padding: 10px 2% 2% 10px;
+  vertical-align: middle;
+  .name {
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+    word-break: break-word;
+  }
+}
+
+// point person shown in supporter nav, if one is set
+
+.point-pic-left {
+  float: left;
+  height: 48px;
+  margin-right: 7px;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    @include border-radius-top-left(5px);
+    @include border-radius-bottom-left(5px);
+    max-width: 100%;
+  }
+}
+
+.point-pic-right {
+  background-color: #fff;
+  min-height: 48px;
+  padding: 1%;
+  line-height: 16px;
+  @include border-radius-top-right(5px);
+  @include border-radius-bottom-right(5px);
+  border: 1px solid #ebebeb;
+  .byline {
+    margin: 3px 0;
+  }
+  i {
+    font-size: 15px;
+  }
+}
+
+// box which wraps blocks of content in sidebar
+
+.box {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 15px;
+  @include border-radius(5px);
+  border: 1px solid #ebebeb;
+  &:last-child {
+      margin-bottom: 0;
+    }
+}
+
+// email signup which appears in right column if a user is signed out
+
+.email-signup {
+  input.text {
+    min-height: none;
+    height: 39px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-appearance: none;
+    width: 73%; 
+    @include border-radius-top-right(0px);
+    @include border-radius-bottom-right(0px);
+    border-right: 0;
+    display: inline-block;
+  }
+  .submit-button {
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    width: 27%; // 81 by 300
+    @include border-radius-top-left(0px);
+    @include border-radius-bottom-left(0px);
+    
+    &.disabled {
+      opacity: 0.45;
+    }
+  }
+}
+
+// flag link which allows user to report a post or comment
+
+.flag {
+  font-weight: normal !important;
+  font-size: 12px;
+}
+
+// activities shown at the bottom of a page, if turned on
+
+.activities {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    padding: 15px 25px;
+    margin: 0;
+    font-size: 14px;
+    list-style: none;
+    padding-bottom: 15px;
+    border-bottom: 1px solid white;
+    [class^="icon-"] {
+      display: none;
+    }
+    .activity {
+      padding-left: 60px;
+      word-break: break-word;
+    }
+    .stream-pic {
+      float: left;
+      width: 48px;
+      height: 48px;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &:first-child {
+        border-top: 1px solid white;
+      }
+      a {
+        font-weight: bold;
+      }
+      .activity_content {
+        font-size: 14px;
+        padding: 10px 0 0 0;
+        a {
+          font-weight: normal;
+        }
+      }
+      .icon {
+        display: none;
+      }
+  }
+}
+
+// clean formatting for name, activity type and date in page stream in mobile view
+
+ul#page-stream {
+  li.activity  {
+    span + a {
+      display: block;
+    } 
+  }
+  .activity-time {
+    display: block;
+  }
+  .timeago {
+    display: block;
+    padding-right: 3px;
+    float: left;
+    font-size: 12px;
+    color: #999;
+  }
+  .activity-links a {
+    display: inline;
+  }
+  .activity-content {
+    clear: left;
+  }
+}
+
+// like page content at the bottom of pages
+
+.like-page {
+  clear: both;
+}
+
+//share url input box
+
+.share-url {
+  width: 400px;
+  @include box-sizing(border-box);
+}
+
+// excerpts of activities shown on a user profile page
+
+.page-excerpts {
+  margin: 0;
+  padding: 0;
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    .activity_content_text, .activity_content {
+      margin-top: 15px;
+    }
+    .activity {
+      margin: 0 0 15px 0;
+      // remove if you wish to show icons on activities
+      [class^="icon-"] {
+        display: none;
+      }
+    }
+    .page-excerpt {
+      padding: 20px 0 0 20px;
+    }
+    .form-wrap {
+      .answer-wrap {
+        background-color: darken(#f3f3f3, 5);
+      }
+      .icon-up-dir:before {
+          color: darken(#f3f3f3, 5);
+        }
+    }
+  }
+}
+
+.excerpt {
+  margin: 15px 0;
+}
+
+.excerpt .submit-button,
+.content-pages-show-moneybomb .submit-button{
+  vertical-align: top;
+}
+
+// container which wraps all reactions to a page
+
+.reaction-wrap {
+  background-color: #f3f3f3;
+  @include border-radius(5px);
+}
+
+// list of events on calendar page
+
+.event-wrap {
+  margin: 0;
+  padding: 0;
+  @include nb-clearfix;
+  
+  li {
+    list-style: none;
+    background-color: #f3f3f3;
+    padding: 15px;
+    margin-bottom: 15px;
+    @include border-radius(2px);
+    border-bottom: 2px solid $theme-color-3;
+    
+    &:last-child {
+        margin-bottom: 0;
+      }
+  }
+  
+  p {
+    @include nb-clearfix;
+  }
+}
+
+.event-venue {
+  margin: 0 0 1em 0;
+}
+// 'showing all events' text on calendar page
+
+.map-wrap {
+  .showing-all {
+    text-align: right;
+    font-size: 12px;
+  }
+}
+
+// sign in text under sign up form
+
+.social {
+  font-size: 12px;
+}
+
+//invoices page
+
+.invoices {
+  .amount {
+    text-align: right;
+  }
+  .invoice-total .label {
+    padding-right: 10px;
+  }
+  .expander-content {
+    display: none;
+  }
+}
+
+//moneybomb page
+
+.page-type-moneybomb {
+  .event-detail subhead {
+    text-transform: uppercase;
+  }
+}
+
+//recruiter page
+
+.page-type-recruiting {
+  h4 {
+    font-family: $font;
+  }
+}
+
+// container for entire header area
+
+.header-container {
+  padding-bottom: 40px;
+  min-height: 140px;
+  background: url($header-texture) repeat-x $header-color;
+}
+
+// site wide footer
+
+footer {
+  background-color: #fff;
+  padding: 20px;
+  @include border-radius(5px);
+  border: 1px solid #ebebeb;
+  .footer-text p {
+    margin: 0;
+  }
+  .row-fluid [class*="span"] {
+    min-height: 0;
+  }
+  .footer-right {
+    margin-top: 15px;
+  }
+}
+
+// byline used in blogs, suggestion boxes, events, etc.
+
+.byline {
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 15px;
+  margin-top: 5px;
+  color: #888;
+}
+
+// supporter nav which is shown if a user is signed in
+
+.supporter-nav {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    margin-bottom: 1px;
+    i, span {
+      color: darken($theme-color-1, 10);
+    }
+    &.on {
+      border-left: 3px solid $theme-color-3;
+    }
+    &:first-child {
+        @include border-radius-top-left(5px);
+        @include border-radius-top-right(5px);
+      }
+      &:last-child {
+        margin-bottom: 15px;
+        @include border-radius-bottom-left(5px);
+        @include border-radius-bottom-right(5px);
+      }
+      &:hover {
+        border-left: 3px solid $theme-color-3;
+      }
+      a {
+        padding: 15px 15px;
+        display: block;
+      }
+  }
+}
+
+.supporter-nav-button {
+  margin: 5px 0;
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+  line-height: 30px;
+}
+
+// rules link shown near comment box
+
+.review-rules {
+  display: block;
+  padding: 10px 15px 0 18px;
+  font-size: 12px;
+}
+
+// follow page link shown in page stream
+
+.page-follow {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+}
+
+// optional header image uploaded in site settings
+
+.header-image {
+  max-width: 100%;
+  margin-bottom: 50px;
+  margin-top: -30px;
+}
+
+//message that appears when a form is submitted
+.form-submitting {
+  padding: 15px 7px 0 0;
+  img {
+    margin-right: 6px;
+  }
+}
+
+// suggestion box tags
+
+.tag-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li {
+    display: inline;
+    line-height: 37px;
+    white-space: nowrap;
+    a {
+      padding: 5px 10px;
+      margin: 0 3px 0 0;
+      text-decoration: none;
+      color: black;
+      text-transform: capitalize;
+      background-color: $theme-color-2;
+      @include border-radius(2px);
+    }
+  }
+  li a:hover {
+      background-color: darken($theme-color-2, 10);
+    }
+    li.current a, li.current a:hover {
+      color: #fff;
+      background-color: $theme-color-1;
+    }
+}
+
+// layout for share buttons at the bottom of most pages
+
+.sharetable {
+  min-height: 39px;
+  .facebook-cell,
+  .twitter-cell,
+  .gplus-cell {
+    float: left;
+    text-align: left;
+    vertical-align: top;
+  }
+  .facebook-cell {
+    padding: 0 20px 15px 0;
+    width: 350px;
+  }
+  .twitter-cell {
+    padding: 0 20px 0 0;
+    width: 75px;
+    
+    a {
+      text-indent: -999em;
+      display: inline-block;
+    }
+  }
+  .gplus-cell {
+    width: 52px;
+  }
+}
+
+.like-page {
+  margin-top: 15px;
+}
+
+// political/social capital displayed next to names
+
+.pc {
+  background-color: $theme-color-2;
+  color: #000;
+  padding: 2px 5px;
+  font-size: 10px;
+}
+
+// yes or no indicator on recuiter page
+
+.off-button-small {
+  font-size: 11px;
+  color: $red;
+}
+
+.on-button-small {
+  font-size: 11px;
+  color: $green;
+}
+
+.subhead {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+// applied to alerts or warnings
+
+.red {
+  color: $red;
+}
+
+small {
+  font-size: 85%;
+}
+
+// timestamp on activity
+
+.timeago {
+  font-size: 65%;
+}
+
+// tags users can select on suggestion page
+
+.suggestion-tag-list {
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+    margin:  0 0 10px 0;
+  }
+  a {
+    padding: 5px 0 15px 0;
+    text-decoration: none;
+    color: black;
+    text-transform: capitalize;
+    .tag-count {
+      color: #777;
+    }
+  }
+}
+
+.leaderboard {
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  margin-bottom: 25px;
+  h4 {
+    margin-bottom: 15px;
+  }
+  &.last {
+    margin-bottom: 0;
+  }
+}
+
+// list of people on leaderboards, follows and following pages
+
+.people-list {
+  padding: 14px 10px 10px 10px;
+  width: 100%;
+  margin-bottom: 5px;
+  height: 72px;
+  position: relative;
+  .people-list-pic {
+    margin: -14px 10px 0 -10px;
+    float: left;
+    height: 72px;
+    width: 72px;
+    position: relative;
+  }
+  .people-name {
+    font-weight: bold;
+  }
+  .leaderboard-rank, .people-pc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $theme-color-3;
+    font-size: 10px;
+    line-height: 17px;
+    padding: 0 5px;
+    color: white;
+  }
+  .people-list-follow {
+    text-align: right;
+    font-size: 13px;
+    position: absolute;
+    top: 14px;
+    right: 10px;
+  }
+  .network {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 17px;
+  }
+}
+
+.supporter-follow-details {
+  font-size: 0.9em;
+  overflow: hidden;
+  .network {
+    padding-right: 10px;
+  }
+  .addreaction, .addreaction-right, .plus, .plus-left {
+    font-size: 1em;
+  }
+}
+// alternating background color used in people list
+
+.odd {
+  background-color: #f3f3f3;
+}
+
+// tracking url on recruiting page
+
+#tracking_link {
+  width: 100%;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+// if a page has tags
+
+.page-tags {
+  margin-top: 15px;
+  .icon-tag {
+    display: inline-block;
+    padding-top: 5px;
+    font-size: 12px;
+  }
+}
+
+.page-tag-background {
+  display: inline-block;
+}
+
+.page-tag {
+  text-indent: 40px;
+  background-color: $theme-color-1;
+  font-size: 11px;
+  color: white;
+  padding: 2px 5px;
+  @include border-radius(2px);
+  white-space: nowrap;
+  a {
+    color: white;
+  }
+}
+
+// site rules
+
+.rule-list {
+  padding-left: 20px;
+  li {
+    padding-bottom: 15px;
+  }
+  .rule {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  p {
+    margin: 5px 0;
+  }
+}
+
+// paid membership options
+
+ul.membership-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li.membership {
+    position: relative;
+    text-align: center;
+    list-style: none;
+    background-color: #f3f3f3;
+    @include border-radius(2px);
+    padding: 15px;
+    display: inline-block;
+    margin: 0 10px 15px 0;
+    width: 100%; // 236px ÷ 984px
+    .membership-bottom {
+      background-color: #444;
+      color: #ccc;
+    }
+    .membership-blurb {
+      padding: 15px 0;
+      font-size: 13px;
+      line-height: 16px;
+    }
+    .buy {
+      text-align: center;
+    }
+    .badge {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// stat boxes on political capital and recruiting pages
+
+.stat-boxes {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  .stat-box {
+    box-shadow: 0 0 1px rgba(black, 0.66), inset 0 0 10px rgba(white, 0.1);
+    width: 105px;
+    float: left;
+    text-align: center;
+    color: #4d4d4d;
+    background-color: lighten($theme-color-2, 10);
+    margin-right: 0;
+    margin-bottom: 10px;
+    min-height: 50px;
+    .stat-box-inner {
+      padding: 6px;
+      min-height: 30px;
+      .stat {
+        margin-top: 0px;
+        font-size: 18px;
+        line-height: 23px;
+        font-weight: 700;
+        &.no-label {
+          padding: 8px;
+        }
+      }
+      .stat-box + .stat-box {
+        background: #000;
+        border-left: none;
+      }
+    }
+    .label {
+      font-size: 0.8em;
+      line-height: 1.1em;
+      white-space: nowrap;
+    }
+  }
+}
+
+// answers on faq pages
+
+.answer-wrap {
+  @include border-radius(2px);
+  background-color: #f3f3f3;
+  padding: 15px;
+  width: 100%;
+  p:first-child {
+      margin: 0;
+    }
+    .answer-a {
+      float: left;
+      width: 25px;
+      font-weight: bold;
+    }
+    .answer {
+      float: left;
+      width: 91%;
+    }
+    .official-response {
+      font-weight: bold;
+    }
+}
+
+.answer {
+  .icon-up-dir:before {
+      margin: 0;
+      font-size: 20px;
+      line-height: 7px;
+      padding: 5px 0 0 40px;
+      color: #f3f3f3;
+      display: block;
+      vertical-align: bottom;
+    }
+}
+
+// list of questions on faq pages
+
+.question-list {
+  margin: 0;
+  padding: 0 0 0 15px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  li {
+    list-style: disc;
+    margin: 0;
+    padding: 0 0 15px 0;
+    &:last-child {
+        padding: 0;
+      }
+  }
+}
+
+.left-column-narrow {
+  .question-list {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.faq .excerpt {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 0 !important;
+}
+
+// share box which appears after a user submits an action
+
+.flash-share {
+  margin: 0 0 25px 0;
+  .h3 {
+    @include border-radius-top-left(5px);
+    @include border-radius-top-right(5px);
+    font-size: 24px;
+    font-family: $headline-font;
+    background-color: $theme-color-3;
+    color: white;
+    padding: 15px;
+    margin: 0;
+  }
+  .share {
+    @include border-radius-bottom-left(5px);
+    @include border-radius-bottom-right(5px);
+    @include border-radius-top-left(0);
+    @include border-radius-top-right(0);
+    background-color: #f8f8f8;
+    border-bottom: 2px solid $theme-color-3;
+    padding: 15px 15px 0 15px;
+  }
+}
+
+.pattern {
+  overflow: hidden;
+  & > .wrap {
+    padding-bottom: 20px;
+  }
+}
+
+// used to slide out off canvas nav
+
+.wrap {
+  position: relative;
+  @include transition(all 0.3s ease-out);
+  &.active {
+    left: 16em;
+  }
+}
+
+// hide one column container if these wide templates are used
+
+.page-profiles-show-wide, .page-pages-show-faq-wide, .page-pages-show-question-wide {
+  .onecolumn-container {
+    background-color: transparent;
+    padding: 0;
+    @include border-radius(0);
+    border: none;
+    margin: 0;
+  }
+  .right-column .is_following {
+    display: none;
+  }
+}
+
+// content only visible in mobile viewport
+
+.mobile-visible {
+  display: block;
+}
+
+// content only visible in desktop viewport
+
+.desktop-visible {
+  display: none;
+}
+
+.comment .form {
+  @include nb-clearfix;
+}
+
+// making sure google map on calendar page resizes properly
+
+#google_map {
+  img {
+    max-width: none;
+  }
+  * {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+}
+
+// share box container, shown when a user clicks the share button
+
+.share-container {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-left: 2px solid $theme-color-3;
+}
+
+// invoice page table
+
+td.invoice-total {
+  font-weight: bold;
+  background-color: white !important;
+  text-align: right;
+}
+
+td.invoice-quantity {
+  padding-left: 4%;
+}
+
+h4.expander-head {
+  background-color: #f3f3f3;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.fb-like-box, .fb-like-box span, .fb-like-box.fb_iframe_widget span iframe {
+  width: 100% !important;
+}
+
+.email-form {
+  white-space: nowrap;
+}
+
+// flash messages
+
+#flash {
+  .notice {
+    padding: 8px 14px;
+    margin-bottom: 20px;
+    background-color: #fcf8e3;
+    border: 1px solid #fbeed5;
+    @include border-radius(2px);
+  }
+  .flash-message {
+    display: inline-block;
+  }
+  button.flash-close {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 16px;
+    padding: 0;
+    margin: 0;
+    float: right;
+    color: #000;
+    @include opacity(.2);
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    &:hover {
+        cursor: pointer;
+        @include opacity(.4);
+      }
+  }
+  .success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+  }
+  .error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+  }
+  .info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #3a87ad;
+  }
+}
+
+// page specific tweaks
+
+.page-profiles-show {
+  .left-column {
+    .supporter-pic-left {
+      img, .pc {
+        @include border-radius(0px);
+      }
+    }
+    .supporter-pic-right {
+      font-size: 100%;
+      padding: 0 0 0 10px;
+    }
+    .progress {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.page-profiles-show-wide {
+  .right-column {
+    .progress {
+      margin-bottom: 0;
+    }
+    .bar-goal {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.page-pages-show-signup .page-tags {
+  margin-top: 20px;
+}
+
+.user-session-form-container {
+  .oauth-links {
+    min-width: 150px;
+    margin-bottom: 20px;
+    a {
+      display: inline-block;
+      margin-bottom: 10px;
+      &.login-button-facebook {
+        width: 150px;
+        height: 22px;
+        background: url('signinwithfacebook.png');
+      }
+      &.login-button-twitter {
+        width: 150px;
+        height: 22px;
+        background: url('signinwithtwitter.png');
+      }
+    }
+  }
+  .row-fluid:after {
+      margin-bottom: 0;
+    }
+}
+
+#event_rsvp_guests_count, input.quantity {
+  width: 20%;
+}
+
+.event-detail,
+.event_detail{
+  margin: 15px 0;
+  clear: both;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.blog, .content_tags_show {
+  hr:last-child {
+      display: none;
+    }
+}
+
+.suggestion-page-form-expanded {
+  display: none;
+}
+
+.distance {
+  .within {
+    display: none;
+  }
+}
+
+.released-at {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.contact {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.content-pages-show-political-capital {
+  // remove if you wish to show icons on descriptions
+  [class^="icon-"] {
+    display: none;
+  }
+}
+
+.comment {
+  h3 {
+    padding-bottom: 10px;
+  }
+}
+
+.page-user-sessions-new-wide {
+  h2 {
+    font-size: 24.5px;
+    line-height: 25px;
+    text-align: center;
+  }
+}
+
+.signin-with-facebook {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+.signin-with-twitter {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+// forces groups of words to break together
+
+.inline-block {
+  display: inline-block;
+}
+
+// featured content slider
+
+.page-features {
+  position: relative;
+  margin: -30px 0 50px 0;
+  .single-feature {
+    display: block;
+  }
+  img {
+    width: 100%;
+  }
+  .feature-slides {
+    position: relative;
+    height: auto!important;
+  }
+  .slider-loading {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    top: 20%;
+    left: 44%;
+    position: absolute;
+  }
+  .slides {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    visibility: hidden;
+    a {
+      display: block;
+    }
+    img {
+      height: auto;
+    }
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: relative;
+    }
+  }
+  .features-headline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    background: #333;
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+    padding: 5px;
+    display: block;
+    color: #fff;
+    /* Fallback for web browsers that doesn't support RGBa */
+    background: rgb(0, 0, 0) transparent;
+    /* RGBa with 0.6 opacity */
+    background: rgba(0, 0, 0, 0.6);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+  }
+  // If you want labels to display beneath your images, remove display: none; below //
+  .flex-control-paging {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 40px;
+    line-height: 40px;
+    li {
+      display: inline-block;
+      color: black;
+      margin-right: 5px;
+      cursor: pointer;
+      a {
+        color: black;
+        padding: 0 15px;
+        display: block;
+        
+        &:hover {
+            text-decoration: none;
+          }
+      }
+    }
+    .flex-active a {
+      display: block;
+      color: white;
+    }
+    .flex-active {
+      background-color: $theme-color-3;
+    }
+  }
+}
+
+// previous and next arrows on featured content slider
+
+.flex-direction-nav {
+  position: absolute;
+  top: 18%;
+  z-index: 9999;
+  width: 100%;
+  li {
+    list-style: none;
+    position: absolute;
+    right:0;
+    &:first-child {
+        left: 0;
+        right: auto;
+      }
+  }
+}
+
+.flex-prev, .flex-next {
+  display: none; // hids next/prev arrows in mobile viewport
+  position: absolute; top: 41%;
+  z-index: 9999;
+  font-size: 16px;
+  padding: 15px 10px;
+  background: $theme-color-3;
+  border: 1px solid darken($theme-color-3, 10);
+  color: white;
+}
+
+.flex-prev {
+  left: 0;
+  @include border-radius-top-right(2px);
+  @include border-radius-bottom-right(2px);
+  border-left: 0;
+}
+
+.flex-next {
+  right: 0;
+  @include border-radius-top-left(2px);
+  @include border-radius-bottom-left(2px);
+  border-right: 0;
+}
+
+//pagination
+
+.pagination {
+  &.loading {
+    ul:after {
+        display: inline-block;
+        content: " ";
+        background-image: url('/assets/bert-loader-small.gif');
+        vertical-align: super;
+        width: 16px;
+        height: 11px;
+        margin-left: 12px;
+      }
+  }
+  ul {
+    @include box-shadow(none);
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+.form-errors {
+  background-color: $red;
+  @include border-radius(2px);
+  color: #fff;
+  font-size: 13px;
+  line-height: 17px;
+  margin-bottom: 15px;
+  padding: 10px;
+  list-style-type: none;
+  display: none;
+}
+
+//flag content form
+.flag-content {
+  margin-top: 15px;
+}
+
+/* Ian Edits */
+
+#content em, mark {/* Creates the 'highlight' effect. */
+  background-color: #fdffb6;
+  padding: 2px;
+  box-shadow: #fdffb6 0 0 5px;
+  color: #21272d; 
+  font-style: normal;
+}
+
+/* Photography */
+
+@media (max-width: 1200px) {
+#photography {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+}
+}
+@media (max-width: 1000px) {
+#photography {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+}
+}
+@media (max-width: 800px) {
+#photography {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+}
+}
+@media (max-width: 400px) {
+#photography {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+}
+}
+
+#photography {
+  -webkit-column-gap:   20px;
+  -moz-column-gap:      20px;
+  column-gap:           20px;
+}
+#photography img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom: 20px !important;
+}
