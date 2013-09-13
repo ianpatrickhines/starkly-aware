@@ -20,8 +20,8 @@ $theme-color-4: #3d3d3d;
 $theme-color-5: rgba(26, 188, 156, 0.6);
 
 // general success and error colors
-$red: #b94a48;
-$green: #619114;
+$red: #e74c3c;
+$green: #27ae60;
 
 // background images
 $background-texture: "";
@@ -136,6 +136,14 @@ a {
   outline: none;
 }
 
+.left-column a:hover,
+.onecolumn-container a:hover,
+.footer-text a:hover,
+.footer-right a:hover,
+.footer-left a:hover {
+  text-decoration: underline;
+}
+
 hr {
   display: block;
   height: 1px;
@@ -165,7 +173,7 @@ body {
   background: url($background-texture) repeat $theme-color-2;
   margin: 0;
   font: 15px/21px $font;
-  color: #505054;
+  color: #5A6673;
 }
 
 .width-container {
@@ -293,7 +301,7 @@ iframe[src *= 'youtube'] {
   padding: 8px 15px;
   margin: 0 0 20px;
   list-style: none;
-  background-color: #f5f5f5;
+  background-color: #ecf0f1;
   @include border-radius(4px);
 }
 
@@ -402,7 +410,7 @@ nav {
     background-color: #fff;
     padding: 20px;
     @include border-radius(5px);
-    border: 1px solid #ebebeb;
+    border: 1px solid #ecf0f1;
     margin-bottom: 15px;
   }
   .right-column, .left-column-narrow {
@@ -427,7 +435,7 @@ nav {
   @include border-radius(5px);
   @include border-radius-top-left(7px); // hides background behind image
   background-color: #fff;
-  border: 1px solid #ebebeb;
+  border: 1px solid #ecf0f1;
   margin-bottom: 15px;
   .user-status span {
     display: inline-block;
@@ -508,7 +516,7 @@ nav {
   line-height: 16px;
   @include border-radius-top-right(5px);
   @include border-radius-bottom-right(5px);
-  border: 1px solid #ebebeb;
+  border: 1px solid #ecf0f1;
   .byline {
     margin: 3px 0;
   }
@@ -524,7 +532,7 @@ nav {
   padding: 20px;
   margin-bottom: 15px;
   @include border-radius(5px);
-  border: 1px solid #ebebeb;
+  border: 1px solid #ecf0f1;
   &:last-child {
       margin-bottom: 0;
     }
@@ -679,10 +687,10 @@ ul#page-stream {
     }
     .form-wrap {
       .answer-wrap {
-        background-color: darken(#f3f3f3, 5);
+        background-color: darken(#ecf0f1, 5);
       }
       .icon-up-dir:before {
-          color: darken(#f3f3f3, 5);
+          color: darken(#ecf0f1, 5);
         }
     }
   }
@@ -700,7 +708,7 @@ ul#page-stream {
 // container which wraps all reactions to a page
 
 .reaction-wrap {
-  background-color: #f3f3f3;
+  background-color: #ecf0f1;
   @include border-radius(5px);
 }
 
@@ -713,7 +721,7 @@ ul#page-stream {
   
   li {
     list-style: none;
-    background-color: #f3f3f3;
+    background-color: #ecf0f1;
     padding: 15px;
     margin-bottom: 15px;
     @include border-radius(2px);
@@ -791,7 +799,7 @@ footer {
   background-color: #fff;
   padding: 20px;
   @include border-radius(5px);
-  border: 1px solid #ebebeb;
+  border: 1px solid #ecf0f1;
   .footer-text p {
     margin: 0;
   }
@@ -810,7 +818,7 @@ footer {
   font-size: 11px;
   line-height: 15px;
   margin-top: 5px;
-  color: #888;
+  color: #95a5a6;
 }
 
 // supporter nav which is shown if a user is signed in
@@ -821,7 +829,7 @@ footer {
   li {
     list-style: none;
     background-color: #fff;
-    border: 1px solid #ebebeb;
+    border: 1px solid #ecf0f1;
     margin-bottom: 1px;
     i, span {
       color: darken($theme-color-1, 10);
@@ -1083,7 +1091,7 @@ small {
 // alternating background color used in people list
 
 .odd {
-  background-color: #f3f3f3;
+  background-color: #ecf0f1;
 }
 
 // tracking url on recruiting page
@@ -1148,7 +1156,7 @@ ul.membership-list {
     position: relative;
     text-align: center;
     list-style: none;
-    background-color: #f3f3f3;
+    background-color: #ecf0f1;
     @include border-radius(2px);
     padding: 15px;
     display: inline-block;
@@ -1217,7 +1225,7 @@ ul.membership-list {
 
 .answer-wrap {
   @include border-radius(2px);
-  background-color: #f3f3f3;
+  background-color: #ecf0f1;
   padding: 15px;
   width: 100%;
   p:first-child {
@@ -1243,7 +1251,7 @@ ul.membership-list {
       font-size: 20px;
       line-height: 7px;
       padding: 5px 0 0 40px;
-      color: #f3f3f3;
+      color: #ecf0f1;
       display: block;
       vertical-align: bottom;
     }
@@ -1301,7 +1309,7 @@ ul.membership-list {
     @include border-radius-bottom-right(5px);
     @include border-radius-top-left(0);
     @include border-radius-top-right(0);
-    background-color: #f8f8f8;
+    background-color: #ECF0F1;
     border-bottom: 2px solid $theme-color-3;
     padding: 15px 15px 0 15px;
   }
@@ -1372,7 +1380,7 @@ ul.membership-list {
 .share-container {
   margin-top: 15px;
   padding: 15px;
-  background-color: #f8f8f8;
+  background-color: #ECF0F1;
   border-left: 2px solid $theme-color-3;
 }
 
@@ -1389,7 +1397,7 @@ td.invoice-quantity {
 }
 
 h4.expander-head {
-  background-color: #f3f3f3;
+  background-color: #ecf0f1;
   padding: 5px;
   cursor: pointer;
 }
@@ -1771,7 +1779,7 @@ h4.expander-head {
   background-color: #fdffb6;
   padding: 2px;
   box-shadow: #fdffb6 0 0 5px;
-  color: #21272d; 
+  color: inherit; 
   font-style: normal;
 }
 
@@ -1816,4 +1824,14 @@ h4.expander-head {
   width: 100% !important;
   height: auto !important;
   margin-bottom: 20px !important;
+}
+
+.page-tag a:hover,
+.breadcrumbs a:hover,
+.pagination a:hover {
+  text-decoration: none;
+}
+
+.pagination a {
+  border-color: #bdc3c7;
 }
