@@ -65,14 +65,29 @@
           <div class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/108466010816642032003" data-rel="publisher"></div>
         </div>
         
-        {% if page and page.has_rss? %}
+        {% if page.slug == "blog" or page.parent.slug == "articles" or page.parent.slug == "links" or page.parent.slug == "interviews" or page.parent.slug == "blog" %}
+
         <div class="padtopmore">
-          <a href="{{ page.rss_url }}"><i class="icon-rss"></i></a> <a href="{{ page.rss_url }}">Subscribe with RSS</a>
+          <a href="http://www.ianpatrickhines.com/blog.rss"><i class="icon-rss"></i></a> <a href="http://www.ianpatrickhines.com/blog.rss">All Posts (RSS)</a>
         </div>
+
+        {% else %}
+
+        <div class="padtopmore">
+          <a href="http://www.ianpatrickhines.com/blog.rss"><i class="icon-rss"></i></a> <a href="http://www.ianpatrickhines.com/blog.rss">Subscribe with RSS</a>
+        </div>
+
+        {% endif %}        
+
+        {% if page and page.slug == "links" or page.slug == "interviews" or page.slug == "articles" %}
+        <div class="padtopmore">
+          <a href="{{ page.rss_url }}"><i class="icon-rss"></i></a> <a href="{{ page.rss_url }}">{{ page.headline }} Only (RSS)</a>
+        </div>
+
         {% elsif page and page.has_parent? and page.parent.has_rss? %}
         <div class="padtopmore">
           <a href="{{ page.parent.rss_url }}"><i class="icon-rss"></i></a>
-          <a href="{{ page.parent.rss_url }}">Subscribe with RSS</a>
+          <a href="{{ page.parent.rss_url }}">{{ page.parent.headline }} Only (RSS)</a>
         </div>
         {% endif %}
       </div>
