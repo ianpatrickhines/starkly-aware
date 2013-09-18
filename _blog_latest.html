@@ -1,5 +1,5 @@
 <div class="blog" id="blog-page-{{ page.id }}">
-  {% for post in page.blog.most_recent_blog_posts limit:3 offset:0 %}
+  {% for post in page.blog.most_recent_blog_posts limit:5 offset:0 %}
     <div class="page-excerpt" id="blog-post-page-{{ post.id }}">
       <h3><a href="{{ post.url }}">{{ post.headline }}</a></h3>
 
