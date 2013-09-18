@@ -140,8 +140,19 @@ a {
 .onecolumn-container a:hover,
 .footer-text a:hover,
 .footer-right a:hover,
-.footer-left a:hover {
+.footer-left a:hover,
+ {
   text-decoration: underline;
+}
+
+.page-tag a:hover,
+.breadcrumbs a:hover,
+.pagination a:hover,
+a.button:hover,
+a.small-button:hover,
+a.submit-link:hover {
+  text-decoration: none;
+
 }
 
 hr {
@@ -555,6 +566,7 @@ nav {
     display: inline-block;
   }
   .submit-button {
+    font-size: .8em;
     display: inline-block;
     position: relative;
     top: -5px;
@@ -1826,12 +1838,37 @@ h4.expander-head {
   margin-bottom: 20px !important;
 }
 
-.page-tag a:hover,
-.breadcrumbs a:hover,
-.pagination a:hover {
-  text-decoration: none;
-}
-
 .pagination a {
   border-color: #bdc3c7;
+}
+
+// search box that appears within the left column
+
+.site-search {
+  input.text {
+    min-height: none;
+    height: 39px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-appearance: none;
+    width: 73%; 
+    @include border-radius-top-right(0px);
+    @include border-radius-bottom-right(0px);
+    border-right: 0;
+    display: inline-block;
+  }
+  .submit-button {
+    font-size: .8em;
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    width: 27%; // 81 by 300
+    @include border-radius-top-left(0px);
+    @include border-radius-bottom-left(0px);
+    
+    &.disabled {
+      opacity: 0.45;
+    }
+  }
 }
