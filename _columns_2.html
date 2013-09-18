@@ -65,7 +65,7 @@
           <div class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/108466010816642032003" data-rel="publisher"></div>
         </div>
         
-        {% if page.slug == "blog" or page.parent.slug == "articles" or page.parent.slug == "links" or page.parent.slug == "interviews" or page.parent.slug == "blog" %}
+        {% if page and page.parent.slug == "articles" or page.parent.slug == "commentary" or page.parent.slug == "interviews" or page.parent.slug == "blog" %}
 
         <div class="padtopmore">
           <a href="http://www.ianpatrickhines.com/blog.rss"><i class="icon-rss"></i></a> <a href="http://www.ianpatrickhines.com/blog.rss">All Posts (RSS)</a>
@@ -79,7 +79,7 @@
 
         {% endif %}        
 
-        {% if page and page.slug == "links" or page.slug == "interviews" or page.slug == "articles" %}
+        {% if page and page.has_rss? %}
         <div class="padtopmore">
           <a href="{{ page.rss_url }}"><i class="icon-rss"></i></a> <a href="{{ page.rss_url }}">{{ page.headline }} Only (RSS)</a>
         </div>
@@ -90,10 +90,6 @@
           <a href="{{ page.parent.rss_url }}">{{ page.parent.headline }} Only (RSS)</a>
         </div>
         {% endif %}
-      </div>
-    </div>
-    
-    {% endif %}
     
   </div>
   <!-- .right-column -->
