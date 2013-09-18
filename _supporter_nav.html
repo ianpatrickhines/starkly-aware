@@ -147,7 +147,7 @@
   </li>
   {% endfor %}
   
-  {% if page_type == 'User Page' %}
+  {% comment %}{% if page_type == 'User Page' %}
   <li class="on">
     <a href="{{ site.edit_pages_url }}">
       <i class="icon-popup"></i>
@@ -161,7 +161,7 @@
       Your pages
     </a>
   </li>
-  {% endif %}
+  {% endif %}{% endcomment %}
   {% if page_type == 'User Settings' %}
   <li class="on">
     <a href="{{ request.current_signup.settings_url }}">
