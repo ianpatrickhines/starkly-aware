@@ -697,12 +697,12 @@ ul#page-stream {
     .page-excerpt {
       padding: 20px 0 0 20px;
     }
-    .form-wrap {
+    .form-wrap {      
       .answer-wrap {
-        background-color: darken(#ecf0f1, 5);
+        background-color: #ecf0f1;
       }
       .icon-up-dir:before {
-          color: darken(#ecf0f1, 5);
+          color: #ecf0f1;
         }
     }
   }
@@ -1871,4 +1871,9 @@ h4.expander-head {
       opacity: 0.45;
     }
   }
+}
+
+/* Make comment form have proper background color */
+.form-wrap {
+  background-color: #ECF0F1;
 }
