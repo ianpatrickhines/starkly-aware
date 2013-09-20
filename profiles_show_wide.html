@@ -53,7 +53,7 @@
         <span class="pc">{{ request.current_signup.capital_amount_format }}</span>
       </div>
       <div class="supporter-pic-right">
-        <a href="{{ request.current_signup.settings_url }}" class="name" id="name">{{ profile.published_name }}</a>
+        <span class="name" id="name">{{ profile.published_name }}</span>
 
         <div class="user-status">
           {% if profile.has_membership_level_badge %}
