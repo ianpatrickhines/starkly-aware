@@ -11,9 +11,14 @@ $headline-font: 'Avenir Next', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana
 // main font
 $font: 'Avenir Next', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, sans-serif; 
 
-$theme-color-1: #1ABC9C;
+$peter-river: #3498db;
+$belize-hole: #2980b9;
+$turquoise: #1abc9c;
+$turquoise-active: #33d1ac;
+
+$theme-color-1: $turquoise;
 $theme-color-2: #fff;
-$theme-color-3: #1ABC9C;
+$theme-color-3: $turquoise;
 $theme-color-4: #3d3d3d;
 
 // form input area focus color
