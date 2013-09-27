@@ -11,12 +11,19 @@
 </div>
 
 {% else %}
+
+<div class="box">
+	<strong>Stay connected!</strong><br/>
+	<div class="social">
+		Subscribe to receive featured articles about creating, mentorship and doing good through design.
+	</div>
+</div>
 	
 	<div class="email-signup form">
   {% form_for signup %}   
    {% hidden_field_tag "page_id", signup_form.id %} <div class="form-errors">{% error_messages_for signup %}</div>
 
-   	{% email_field "email", class:"text", placeholder:"Email address", required: "required" %}{% submit_tag "Join", class:"submit-button" %}
+   	{% email_field "email", class:"text", placeholder:"Email address", required: "required" %}{% submit_tag "Go", class:"submit-button" %}
  	
 	    <div class="form-submit"></div>
   {% endform_for %}
