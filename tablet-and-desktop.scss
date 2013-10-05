@@ -12,45 +12,15 @@ $headline-font: 'Avenir Next', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana
 // main font
 $font: 'Avenir Next', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, sans-serif; 
 
-// flat ui colors
-$turquoise: #1abc9c;
-$turquoise-active: #33d1ac;
-$green-sea: #16a085;
-
-$emerald: #2ecc71;
-$nephritis: #27ae60;
-
 $peter-river: #3498db;
 $belize-hole: #2980b9;
-
-$amethyst: #9b59b6;
-$wisteria: #8e44ad;
-
-$wet-asphalt: #34495e;
-$midnight-blue: #2c3e50;
-
-$sun-flower: #f1c40f;
-$orange: #f39c12;
-
-$carrot: #e67e22;
-$pumpkin: #d35400;
-
-$alizarin: #e74c3c;
-$pomegranate: #c0392b;
-
-$clouds: #ecf0f1;
-$silver: #bdc3c7;
-
-$concrete: #95a5a6;
-$asbestos: #7f8c8d;
-
-// theme colors 
+$turquoise: #1abc9c;
+$turquoise-active: #33d1ac;
 
 $theme-color-1: $turquoise;
 $theme-color-2: transparent;
 $theme-color-3: $turquoise-active;
 $theme-color-4: $turquoise; 
-$theme-color-5: $clouds;
 
 // general success and error colors
 $red: #E74C3C;
@@ -81,7 +51,7 @@ $header-texture: "";
     background-color: #fff;
     padding: 20px;
     @include border-radius(5px);
-    border: 1px solid $theme-color-5;
+    border: 1px solid #ecf0f1;
     float: left;
     width: 68.2261208577%;
     // 710px ÷ 1026px

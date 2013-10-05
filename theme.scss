@@ -11,44 +11,15 @@ $headline-font: 'Avenir Next', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana
 // main font
 $font: 'Avenir Next', 'Open Sans', 'Helvetica Neue', Helvetica, Verdana, sans-serif; 
 
-// flat ui colors
-$turquoise: #1abc9c;
-$turquoise-active: #33d1ac;
-$green-sea: #16a085;
-
-$emerald: #2ecc71;
-$nephritis: #27ae60;
-
 $peter-river: #3498db;
 $belize-hole: #2980b9;
+$turquoise: #1abc9c;
+$turquoise-active: #33d1ac;
 
-$amethyst: #9b59b6;
-$wisteria: #8e44ad;
-
-$wet-asphalt: #34495e;
-$midnight-blue: #2c3e50;
-
-$sun-flower: #f1c40f;
-$orange: #f39c12;
-
-$carrot: #e67e22;
-$pumpkin: #d35400;
-
-$alizarin: #e74c3c;
-$pomegranate: #c0392b;
-
-$clouds: #ecf0f1;
-$silver: #bdc3c7;
-
-$concrete: #95a5a6;
-$asbestos: #7f8c8d;
-
-// theme colors
 $theme-color-1: $turquoise;
 $theme-color-2: #fff;
 $theme-color-3: $turquoise;
 $theme-color-4: #3d3d3d;
-$theme-color-5: $clouds;
 
 // form input area focus color
 $theme-color-5: rgba(26, 188, 156, 0.6);
@@ -346,7 +317,7 @@ iframe[src *= 'youtube'] {
   padding: 8px 15px;
   margin: 0 0 20px;
   list-style: none;
-  background-color: $theme-color-5;
+  background-color: #ecf0f1;
   @include border-radius(4px);
 }
 
@@ -455,7 +426,7 @@ nav {
     background-color: #fff;
     padding: 20px;
     @include border-radius(5px);
-    border: 1px solid $theme-color-5;
+    border: 1px solid #ecf0f1;
     margin-bottom: 15px;
   }
   .right-column, .left-column-narrow {
@@ -480,7 +451,7 @@ nav {
   @include border-radius(5px);
   @include border-radius-top-left(7px); // hides background behind image
   background-color: #fff;
-  border: 1px solid $theme-color-5;
+  border: 1px solid #ecf0f1;
   margin-bottom: 15px;
   .user-status span {
     display: inline-block;
@@ -561,7 +532,7 @@ nav {
   line-height: 16px;
   @include border-radius-top-right(5px);
   @include border-radius-bottom-right(5px);
-  border: 1px solid $theme-color-5;
+  border: 1px solid #ecf0f1;
   .byline {
     margin: 3px 0;
   }
@@ -577,7 +548,7 @@ nav {
   padding: 20px;
   margin-bottom: 15px;
   @include border-radius(5px);
-  border: 1px solid $theme-color-5;
+  border: 1px solid #ecf0f1;
   &:last-child {
       margin-bottom: 0;
     }
@@ -733,10 +704,10 @@ ul#page-stream {
     }
     .form-wrap {      
       .answer-wrap {
-        background-color: $theme-color-5;
+        background-color: #ecf0f1;
       }
       .icon-up-dir:before {
-          color: $theme-color-5;
+          color: #ecf0f1;
         }
     }
   }
@@ -754,7 +725,7 @@ ul#page-stream {
 // container which wraps all reactions to a page
 
 .reaction-wrap {
-  background-color: $theme-color-5;
+  background-color: #ecf0f1;
   @include border-radius(5px);
 }
 
@@ -767,7 +738,7 @@ ul#page-stream {
   
   li {
     list-style: none;
-    background-color: $theme-color-5;
+    background-color: #ecf0f1;
     padding: 15px;
     margin-bottom: 15px;
     @include border-radius(2px);
@@ -845,7 +816,7 @@ footer {
   background-color: #fff;
   padding: 20px;
   @include border-radius(5px);
-  border: 1px solid $theme-color-5;
+  border: 1px solid #ecf0f1;
   .footer-text p {
     margin: 0;
   }
@@ -875,7 +846,7 @@ footer {
   li {
     list-style: none;
     background-color: #fff;
-    border: 1px solid $theme-color-5;
+    border: 1px solid #ecf0f1;
     margin-bottom: 1px;
     i, span {
       color: darken($theme-color-1, 10);
@@ -1137,7 +1108,7 @@ small {
 // alternating background color used in people list
 
 .odd {
-  background-color: $theme-color-5;
+  background-color: #ecf0f1;
 }
 
 // tracking url on recruiting page
@@ -1202,7 +1173,7 @@ ul.membership-list {
     position: relative;
     text-align: center;
     list-style: none;
-    background-color: $theme-color-5;
+    background-color: #ecf0f1;
     @include border-radius(2px);
     padding: 15px;
     display: inline-block;
@@ -1271,7 +1242,7 @@ ul.membership-list {
 
 .answer-wrap {
   @include border-radius(2px);
-  background-color: $theme-color-5;
+  background-color: #ecf0f1;
   padding: 15px;
   width: 100%;
   p:first-child {
@@ -1297,7 +1268,7 @@ ul.membership-list {
       font-size: 20px;
       line-height: 7px;
       padding: 5px 0 0 40px;
-      color: $theme-color-5;
+      color: #ecf0f1;
       display: block;
       vertical-align: bottom;
     }
@@ -1355,7 +1326,7 @@ ul.membership-list {
     @include border-radius-bottom-right(5px);
     @include border-radius-top-left(0);
     @include border-radius-top-right(0);
-    background-color: $theme-color-5;
+    background-color: #ECF0F1;
     border-bottom: 2px solid $theme-color-3;
     padding: 15px 15px 0 15px;
   }
@@ -1426,7 +1397,7 @@ ul.membership-list {
 .share-container {
   margin-top: 15px;
   padding: 15px;
-  background-color: $theme-color-5;
+  background-color: #ECF0F1;
   border-left: 2px solid $theme-color-3;
 }
 
@@ -1443,7 +1414,7 @@ td.invoice-quantity {
 }
 
 h4.expander-head {
-  background-color: $theme-color-5;
+  background-color: #ecf0f1;
   padding: 5px;
   cursor: pointer;
 }
@@ -1909,5 +1880,5 @@ h4.expander-head {
 
 /* Make comment form have proper background color */
 .form-wrap {
-  background-color: $theme-color-5;
+  background-color: #ECF0F1;
 }
