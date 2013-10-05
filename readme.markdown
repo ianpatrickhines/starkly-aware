@@ -1,12 +1,20 @@
-#ianpatrickhines.com (Version 1)
+#ianpatrickhines.com (Version 1.1)
 Created by Ian Patrick Hines
 
-*September 7, 2013*
+*October 4, 2013*
 
 Original: [ianpatrickhines.com](http://ianpatrickhines.com)
 License: The MIT License (MIT) (See LICENSE.markdown)
 
 ##Change Notes:
+
+###Version 1.1
+
+- Removed the /photography section. Code still exists, but I wasn't using it.
+- Updated color scheme to leverage Flat UI colors. (http://flatuicolors.com/)
+- Updated SASS support in the stylesheets to make color changing easier
+- Tweaked public profiles a bit (the sidebar)
+- Removed "Your pages" from the supporter nav, since — honestly — almost no one will have any
 
 ###Version 1.0
 
