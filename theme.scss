@@ -1909,3 +1909,8 @@ h4.expander-head {
 .form-wrap {
   background-color: $theme-color-6;
 }
+
+/* Make page tags react on hover */
+.page-tag:hover {
+  background-color: $turquoise-active;
+}
