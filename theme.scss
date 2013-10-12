@@ -1914,3 +1914,8 @@ h4.expander-head {
 .page-tag:hover {
   background-color: $turquoise-active;
 }
+
+/* Make "Follow Reactions" button react on hover */
+.delete:hover {
+  color: $turquoise-active;
+}
