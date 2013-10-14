@@ -4,7 +4,10 @@ Created by Ian Patrick Hines
 *October 4, 2013*
 
 Original: [ianpatrickhines.com](http://ianpatrickhines.com)
-License: The MIT License (MIT) (See LICENSE.markdown)
+
+License: The MIT License (MIT) (See [LICENSE.markdown](https://github.com/ianpatrickhines/ianpatrickhines-5218337c8ed5f07127000002/blob/master/LICENSE.markdown))
+
+**Starkly Aware** is a NationBuilder theme based upon Aware, a public theme designed by NationBuilder Co-Founder and Vice President of Design [Jesse Haff](http://nationbuilder.com/jesse). 
 
 ##Change Notes:
 
