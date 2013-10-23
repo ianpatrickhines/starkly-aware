@@ -26,9 +26,14 @@
       <li><a href="/login"><i class="icon-user"></i> Sign in with Email</a></li>
     </ul>
     
-    {% if site.has_signup_page? %}
-    {% include "signup_form" with site.signup_page %}
+    {% if page.type_slug == "blog_post" %}
+    {% subpage "newsletter" with "signup_form" %}
+    {% else %}
     {% endif %}
+
+    {% comment %}{% if site.has_signup_page? %}
+    {% include "signup_form" with site.signup_page %}
+    {% endif %}{% endcomment %}
     
     {% if site.has_button1? %}
     <a class="button supporter-nav-button" href="{{ site.button1_page.full_url_with_profile_recruiter }}">{{ site.button1_text }}</a>
@@ -42,7 +47,11 @@
     <a class="button supporter-nav-button" href="{{ site.button3_page.full_url_with_profile_recruiter }}">{{ site.button3_text }}</a>
     {% endif %}
     
+    {% if page.type_slug == "blog_post" %}
     <div class="padtopmore">
+    {% else %}
+    <div>
+    {% endif %}
       <div class="box">
         {% if site.has_facebook_page? %}
         <div class="desktop-visible">
