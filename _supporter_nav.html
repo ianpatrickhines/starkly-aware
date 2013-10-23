@@ -178,14 +178,14 @@
   </li>
   {% endif %}
   
-  {% if page and page.is_editing_available? %}
+  {% comment %}{% if page and page.is_editing_available? %}
   <li>
     <a href="{{ page.edit_url }}">
       <i class="icon-edit"></i>
       Edit this page
     </a>
   </li>
-  {% endif %}
+  {% endif %}{% endcomment %} 
 </ul>
 {% if site.has_button1? %}
 <a class="button supporter-nav-button" href="{{ site.button1_page.full_url_with_profile_recruiter }}">{{ site.button1_text }}</a>
@@ -266,7 +266,7 @@
           <a href="{{ page.rss_url }}"><i class="icon-rss"></i></a> <a href="{{ page.rss_url }}">{{ page.headline }} Only (RSS)</a>
         </div>
 
-        {% elsif page and page.has_parent? and page.parent.has_rss? %}
+        {% elsif page and page.has_parent? and page.parent.has_rss? and page.parent.slug != "blog" %}
         <div class="padtopmore">
           <a href="{{ page.parent.rss_url }}"><i class="icon-rss"></i></a>
           <a href="{{ page.parent.rss_url }}">{{ page.parent.headline }} Only (RSS)</a>

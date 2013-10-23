@@ -85,7 +85,7 @@
         </div>
         {% endif %}
 
-        {% if page and page.has_parent? and page.parent.has_rss? %}
+        {% if page and page.has_parent? and page.parent.has_rss? and page.parent.slug != "blog" %}
         <div class="padtopmore">
           <a href="{{ page.parent.rss_url }}"><i class="icon-rss"></i></a>
           <a href="{{ page.parent.rss_url }}">{{ page.parent.headline }} Only (RSS)</a>
