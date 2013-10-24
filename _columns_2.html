@@ -27,7 +27,7 @@
     </ul>
     
     {% if page.type_slug == "blog_post" %}
-    {% subpage "newsletter" with "signup_form" %}
+    {% include "signup_form" with site.signup_page %}
     {% else %}
     {% endif %}
 
