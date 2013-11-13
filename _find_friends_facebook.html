@@ -1,7 +1,7 @@
 {% if request.current_signup.crawling_facebook? %}
 
   <div class="row-fluid">
-    <div class="span12 facebook-followings">
+    <div class="span12 facebook-followings" id="facebook_followings">
       <img src="{{ "bert-loader-small.gif" | asset_path }}" border="0"> Checking Facebook for people who have joined...
       {{ request.current_signup.crawling_facebook_status_url | auto_refresh }}
     </div>

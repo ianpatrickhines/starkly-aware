@@ -1,7 +1,7 @@
 {% if request.current_signup.crawling_twitter? %}
 
   <div class="row-fluid">
-    <div class="span12 twitter-followings">
+    <div class="span12 twitter-followings" id="twitter_followings">
       <img src="{{ "bert-loader-small.gif" | asset_path }}" border="0"> Checking Twitter for people who have joined...
       {{ request.current_signup.crawling_twitter_status_url | auto_refresh }}
     </div>

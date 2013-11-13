@@ -158,7 +158,12 @@
     <div class="row-fluid">
 
       <div class="span12">
-        <label for="petition_signature_submitted_address">Address (Street, City, State, Postal code)</label>{% text_field "submitted_address", class:"text", required: "required" %}
+        <label for="petition_signature_submitted_address">Address (Street, City, State, Postal code)</label>
+        {% if page.petition.require_address? %}
+          {% text_field "submitted_address", class:"text", required: "required" %}
+        {% else %}
+          {% text_field "submitted_address", class:"text" %}
+        {% endif %}
       </div>
 
     </div>
