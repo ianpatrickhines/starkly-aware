@@ -1919,3 +1919,59 @@ h4.expander-head {
 .delete:hover {
   color: $turquoise-active;
 }
+
+/* Make tables use proper background color */
+
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: $theme-color-6;
+}
+
+/* Override GitHub Gist Styles */
+
+.gist
+{
+  color: inherit !important;
+}
+
+.gist .gist-file
+{
+  border: none !important;
+  border-bottom: none !important;  
+  font-family: inherit !important;
+  margin-bottom: 0 !important;
+}
+
+.gist .gist-file .gist-meta
+{
+  font: inherit !important;
+  text-shadow: 0 !important;
+  overflow:hidden;
+  color:$clouds;
+  padding:0 !important;
+  background-color: inherit !important;
+  background-image: none !important;
+  background-image: none !important;
+  background-image: none !important;
+}
+
+.gist .gist-file .gist-meta a
+{
+  font-weight: inherit !important;
+  color: $theme-color-1 !important;
+  text-decoration:none
+} 
+
+.gist .gist-file .gist-data
+{
+  overflow:auto;
+  word-wrap:normal;
+  background-color: inherit !important;
+  border-bottom: 0 !important;
+  font-size:100%
+}
+
+.gist .gist-file em {
+  background-color: transparent !important;
+  font-style: italic !important;
+  box-shadow: none !important;
+}
