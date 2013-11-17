@@ -24,7 +24,7 @@
 {% if outstanding_invoices.size == 1 %}
 {% for invoice in outstanding_invoices %}
 
-<h4 class="padbottomless">{{ invoice.name }}</h4>
+<h4 class="padbottomless">{{ invoice.name | replace: 'membership', 'retainer' }}</h4>
 <table class="table table-striped">
   <tr>
     <th width="12%">Quantity</th>

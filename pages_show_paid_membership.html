@@ -19,7 +19,7 @@
       <h3>{{ membership_option.membership_level_name }}</h3>
 
       <div class="padtopless padbottomless">
-        <strong>{{ membership_option.amount }}</strong> every {% if membership_option.num_time_periods > 1 %}{{ membership_option.num_time_periods }}{% endif %} {{ membership_option.time_period_type | downcase }}
+        <strong>{{ membership_option.amount }}</strong> {% if page.slug == 'retainers' %}per{% else %}every{% endif %} {% if membership_option.num_time_periods > 1 %}{{ membership_option.num_time_periods }}{% endif %} {{ membership_option.time_period_type | downcase }}
       </div>
       {% if membership_option.has_membership_level_badge %}
       <span class="badge">{{ membership_option.membership_level_badge }}</span>
