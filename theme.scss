@@ -1976,3 +1976,15 @@ h4.expander-head {
   font-style: italic !important;
   box-shadow: none !important;
 }
+
+/* Remove box shadow from form fields */
+
+input:focus, textarea:focus {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+// Make forms & leaderboards have proper background color
+.form-wrap, .people-list.odd, .pagination .active, .pagination a:hover, .table-striped tbody > tr:nth-child(odd) > td, .membership {
+  background-color: $theme-color-6 !important;
+}
