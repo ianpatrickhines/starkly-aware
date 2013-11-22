@@ -37,5 +37,5 @@
 {% if event.event.is_maximum_capacity? %}
 <div class="padtop"><a class="button destroy-link" href="{{ event.url }}">sold out</a></div>
 {% elsif event.event.is_past? == false and event.event.accept_rsvps? %}
-<div class="padtop"><a class="submit-link" href="{{ event.url }}">rsvp</a></div>
+<div class="padtop"><a class="submit-link" href="{{ event.url }}">read more</a></div>
 {% endif %}
