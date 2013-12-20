@@ -1,7 +1,10 @@
 #ianpatrickhines.com (Version 1.1)
 Created by Ian Patrick Hines
 
-*October 4, 2013*
+*December 4, 2013*
+
+##This theme is no longer in use.
+It has been replaced by the ‘[flat blue](https://github.com/ianpatrickhines/ianpatrickhines-5290cb6101925b1303000002)’ theme.
 
 Original: [ianpatrickhines.com](http://ianpatrickhines.com)
 
