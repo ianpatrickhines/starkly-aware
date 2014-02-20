@@ -28,3 +28,5 @@ License: The MIT License (MIT) (See [LICENSE.markdown](https://github.com/ianpat
 - Added recent blog posts to the homepage.
 - Added [Google+ support](http://www.ianpatrickhines.com/google_plus_support).
 - Added the /photography section, which allows me to publish blog posts that are — basically — photo posts. 
+
+Testing repo sync after renaming it on Github.
